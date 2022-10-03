@@ -21,6 +21,7 @@ public class ManipulaFicheiros {
             System.out.println("6 - Mostrar lista de ficheiros ");
             System.out.println("0 - Sair ");
             System.out.println(" Seleccione a opção pretendida");
+            op=ler.nextInt();
             switch(op){
                 case 1: Ficheiro.criaFicheiro();break;
                 case 2: Ficheiro.verificaExiste();break;
