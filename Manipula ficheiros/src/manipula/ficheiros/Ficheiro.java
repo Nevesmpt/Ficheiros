@@ -13,6 +13,7 @@ class Ficheiro {
         String nome;
        System.out.println("Insira o nome do ficheiro a criar");
        nome = ManipulaFicheiros.ler.nextLine();
+       nome = ManipulaFicheiros.ler.next();
        File ficheiro = new File(nome);
        if(!ficheiro.exists()){
             try {
