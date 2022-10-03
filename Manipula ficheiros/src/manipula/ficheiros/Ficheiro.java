@@ -68,6 +68,29 @@ class Ficheiro {
     }
 
     static void escreveFicheiroNovo() {
+         String nome;
+        System.out.println("\n\nInsira o nome do ficheiro a editar");        
+        nome = ManipulaFicheiros.ler.nextLine();
+        nome = ManipulaFicheiros.ler.next();
+        File ficheiro = new File(nome);
+        try{
+            if(!ficheiro.exists()){
+                    ficheiro.createNewFile();
+            } 
+            FileWriter fw = new FileWriter(ficheiro);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String texto;
+            System.out.println("Insira o conteúdo");
+            texto = ManipulaFicheiros.ler.nextLine();
+            texto = ManipulaFicheiros.ler.nextLine();
+            bw.write(texto);
+            bw.newLine();
+            bw.close();
+            fw.close();
+        }catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        System.out.println("\n"); 
         
     }
 
